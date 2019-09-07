@@ -1,0 +1,58 @@
+// main: ../main.less
+// .ui-preview
+.ui-preview {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+
+  &__section {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    color: fade(#000000, 56%);
+    margin-bottom: 15px;
+  }
+
+  &__content {
+    border-top: 1px solid @color__border;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+  }
+
+  &__col {
+    &:first-of-type {
+      width: 200px;
+      flex-shrink: 0;
+
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: calc(~"(100% - 120px) / 4");
+    margin-right: 40px;
+    margin-top: 40px;
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
+  }
+
+  &__color {
+    width: 100%;
+    padding-bottom: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+// #ui-preview

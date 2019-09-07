@@ -10,7 +10,465 @@
 </head>
 
 <body>
-  
+
+  <main class="ui-preview">
+    <!-- .typography -->
+    <section class="ui-preview__section">
+      <div class="ui-preview__title">Typography</div>
+      <div class="ui-preview__content">
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+        <p>Main text</p>
+        <p class="ui__text_secondary">Secondary text</p>
+        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I
+          will give you a complete account of the system, and expound the actual teachings of the great explorer of the
+          truth, the <a href="">master-builder</a> of human happiness. No one rejects, dislikes, or avoids pleasure
+          itself, because it
+          is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that
+          are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+          because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some
+          great pleasure. To take a <a href="">trivial example</a>, which of us ever undertakes laborious physical
+          exercise, except to
+          obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure
+          that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+      </div>
+    </section class="ui-preview__section">
+    <!-- #typography -->
+    <!-- .colors -->
+    <section class="ui-preview__section">
+      <div class="ui-preview__title">Colors</div>
+      <div class="ui-preview__content">
+        <div class="ui-preview__grid">
+          <div class="ui-preview__item">
+            <div class="ui-preview__color" style="background-color: #FFFFFF;"></div>
+            <div class="ui-preview__description">
+              @color__background<br />
+              #FFFFFF
+            </div>
+          </div>
+          <div class="ui-preview__item">
+            <div class="ui-preview__color" style="background-color: #4488FF;"></div>
+            <div class="ui-preview__description">
+              @color__highlight<br />
+              #4488FF
+            </div>
+          </div>
+          <div class="ui-preview__item">
+            <div class="ui-preview__color" style="background-color: #69A0F6;"></div>
+            <div class="ui-preview__description">
+              @color__highlight_light<br />
+              #69A0F6
+            </div>
+          </div>
+          <div class="ui-preview__item">
+            <div class="ui-preview__color" style="background-color: #3D7AE6;"></div>
+            <div class="ui-preview__description">
+              @color__highlight_dark<br />
+              #3D7AE6
+            </div>
+          </div>
+          <div class="ui-preview__item">
+            <div class="ui-preview__color" style="background-color: #ABABAB;"></div>
+            <div class="ui-preview__description">
+              @color__grey<br />
+              #ABABAB
+            </div>
+          </div>
+          <div class="ui-preview__item">
+            <div class="ui-preview__color" style="background-color: rgba(0, 0, 0, 0.04);"></div>
+            <div class="ui-preview__description">
+              @color__black_light<br />
+              rgba (0, 0, 0, 0.04)
+            </div>
+          </div>
+          <div class="ui-preview__item">
+            <div class="ui-preview__color" style="background-color: rgba(0, 0, 0, 0.9);"></div>
+            <div class="ui-preview__description">
+              @color__font<br />
+              rgba (0, 0, 0, 0.9)
+            </div>
+          </div>
+          <div class="ui-preview__item">
+            <div class="ui-preview__color" style="background-color: rgba(255, 255, 255, 0.9);"></div>
+            <div class="ui-preview__description">
+              @color__font_inverted<br />
+              rgba (255, 255, 255, 0.9)
+            </div>
+          </div>
+          <div class="ui-preview__item">
+            <div class="ui-preview__color" style="background-color: #284159;"></div>
+            <div class="ui-preview__description">
+              @color__panel<br />
+              #284159
+            </div>
+          </div>
+          <div class="ui-preview__item">
+            <div class="ui-preview__color" style="background-color: rgba(0, 0, 0, 0.16);"></div>
+            <div class="ui-preview__description">
+              @color__border<br />
+              rgba (0, 0, 0, 0.16)
+            </div>
+          </div>
+          <div class="ui-preview__item">
+            <div class="ui-preview__color" style="background-color: #F15866;"></div>
+            <div class="ui-preview__description">
+              @color__error<br />
+              #F15866
+            </div>
+          </div>
+          <div class="ui-preview__item">
+            <div class="ui-preview__color" style="background-color: rgba(0, 0, 0, 0.32);"></div>
+            <div class="ui-preview__description">
+              @color__hinted<br />
+              rgba (0, 0, 0, 0.32)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #colors -->
+    <!-- .buttons -->
+    <section class="ui-preview__section">
+      <div class="ui-preview__title">Buttons</div>
+      <div class="ui-preview__content">
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Normal</div>
+          <div class="ui-preview__col">
+            <button>Default button</button>
+            <button class="ui__btn_pseudo">Pseudo button</button>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Hover/Focus</div>
+          <div class="ui-preview__col">
+            <button class="ui__btn_hover">Default button</button>
+            <button class="ui__btn_pseudo ui__btn_pseudo-hover">Pseudo button</button>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Active</div>
+          <div class="ui-preview__col">
+            <button class="ui__btn_active">Default button</button>
+            <button class="ui__btn_pseudo ui__btn_pseudo-active">Pseudo button</button>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Disabled</div>
+          <div class="ui-preview__col">
+            <button class="ui__btn_disabled" disabled>Default button</button>
+            <button class="ui__btn_pseudo ui__btn_pseudo-disabled" disabled>Pseudo button</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #buttons -->
+    <!-- .input -->
+    <section class="ui-preview__section">
+      <div class="ui-preview__title">Input</div>
+      <div class="ui-preview__content">
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Empty</div>
+          <div class="ui-preview__col">
+            <div class="ui__form-section empty">
+              <label for="input__empty">Label (optional)</label>
+              <input type="text" name="" id="input__empty" placeholder="Placeholder">
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">With text</div>
+          <div class="ui-preview__col">
+            <div class="ui__form-section">
+              <label for="input__main">Label (optional)</label>
+              <input type="text" name="" id="input__main" placeholder="Placeholder" value="Text">
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Focus</div>
+          <div class="ui-preview__col">
+            <div class="ui__form-section focus">
+              <label for="input__focus">Label (optional)</label>
+              <input type="text" name="" id="input__focus" placeholder="Placeholder" value="Focus">
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Error</div>
+          <div class="ui-preview__col">
+            <div class="ui__form-section error">
+              <label for="input__error">Label (optional)</label>
+              <input type="text" name="" id="input__error" placeholder="Placeholder" value="Error">
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Disabled</div>
+          <div class="ui-preview__col">
+            <div class="ui__form-section disabled">
+              <label for="input__disabled">Label (optional)</label>
+              <input type="text" name="" id="input__disabled" placeholder="Placeholder" value="Disabled" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #input -->
+    <!-- .select -->
+    <section class="ui-preview__section">
+      <div class="ui-preview__title">Select</div>
+      <div class="ui-preview__content">
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Empty</div>
+          <div class="ui-preview__col">
+            <div class="ui__form-section empty">
+              <label for="select__empty">Label (optional)</label>
+              <svg class="ui__icon unchecked">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#select-arrow" disabled>
+                </use>
+              </svg>
+              <select name="" id="select__empty">
+                <option value="0">Placeholder</option>
+                <option value="1">Value 1</option>
+                <option value="2">Value 2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">With text</div>
+          <div class="ui-preview__col">
+            <div class="ui__form-section">
+              <label for="select__main">Label (optional)</label>
+              <select name="" id="select__main">
+                <option value="0">Placeholder</option>
+                <option value="1">Value 1</option>
+                <option value="2">Value 2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Focus</div>
+          <div class="ui-preview__col">
+            <div class="ui__form-section focus">
+              <label for="select__focus">Label (optional)</label>
+              <select name="" id="select__focus">
+                <option value="0">Placeholder</option>
+                <option value="1">Value 1</option>
+                <option value="2">Value 2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Error</div>
+          <div class="ui-preview__col">
+            <div class="ui__form-section error">
+              <label for="select__error">Label (optional)</label>
+              <select name="" id="select__error">
+                <option value="0">Placeholder</option>
+                <option value="1">Value 1</option>
+                <option value="2">Value 2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Disabled</div>
+          <div class="ui-preview__col">
+            <div class="ui__form-section disabled">
+              <label for="select__disabled">Label (optional)</label>
+              <select name="" id="select__disabled">
+                <option value="0">Placeholder</option>
+                <option value="1">Value 1</option>
+                <option value="2">Value 2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Selected</div>
+          <div class="ui-preview__col">
+            <div class="ui__form-section">
+              <label for="select__select">Label (optional)</label>
+              <select name="" id="select__select">
+                <option value="0">Placeholder</option>
+                <option value="1">Value 1</option>
+                <option value="2">Value 2</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #select -->
+    <!-- .checkbox -->
+    <section class="ui-preview__section">
+      <div>Checkbox</div>
+      <div class="ui-preview__content">
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Normal</div>
+          <div class="ui-preview__col">
+            <div class="ui__checkbox">
+              <input type="checkbox" name="" id="checkbox__normal" value="">
+              <label for="checkbox__normal">
+                <svg class="ui__icon unchecked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox" disabled>
+                  </use>
+                </svg>
+                <svg class="ui__icon checked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox-checked"></use>
+                </svg>
+                <span>Label text</span>
+              </label>
+            </div>
+            <div class="ui__checkbox">
+              <input type="checkbox" name="" id="checkbox__normal_checked" value="" checked>
+              <label for="checkbox__normal_checked">
+                <svg class="ui__icon unchecked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox" disabled>
+                  </use>
+                </svg>
+                <svg class="ui__icon checked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox-checked"></use>
+                </svg>
+                <span>Label text</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Hover</div>
+          <div class="ui-preview__col">
+            <div class="ui__checkbox hover">
+              <input type="checkbox" name="" id="checkbox__hover" value="">
+              <label for="checkbox__hover">
+                <svg class="ui__icon unchecked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox" disabled>
+                  </use>
+                </svg>
+                <svg class="ui__icon checked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox-checked"></use>
+                </svg>
+                <span>Label text</span>
+              </label>
+            </div>
+            <div class="ui__checkbox hover">
+              <input type="checkbox" name="" id="checkbox__hover_checked" value="" checked>
+              <label for="checkbox__hover_checked">
+                <svg class="ui__icon unchecked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox" disabled>
+                  </use>
+                </svg>
+                <svg class="ui__icon checked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox-checked"></use>
+                </svg>
+                <span>Label text</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Focus</div>
+          <div class="ui-preview__col">
+            <div class="ui__checkbox focus">
+              <input type="checkbox" name="" id="checkbox__focus" value="">
+              <label for="checkbox__focus">
+                <svg class="ui__icon unchecked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox" disabled>
+                  </use>
+                </svg>
+                <svg class="ui__icon checked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox-checked"></use>
+                </svg>
+                <span>Label text</span>
+              </label>
+            </div>
+            <div class="ui__checkbox focus">
+              <input type="checkbox" name="" id="checkbox__focus_checked" value="" checked>
+              <label for="checkbox__focus_checked">
+                <svg class="ui__icon unchecked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox" disabled>
+                  </use>
+                </svg>
+                <svg class="ui__icon checked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox-checked"></use>
+                </svg>
+                <span>Label text</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Error</div>
+          <div class="ui-preview__col">
+            <div class="ui__checkbox error">
+              <input type="checkbox" name="" id="checkbox__error" value="">
+              <label for="checkbox__error">
+                <svg class="ui__icon unchecked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox" disabled>
+                  </use>
+                </svg>
+                <svg class="ui__icon checked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox-checked"></use>
+                </svg>
+                <span>Label text</span>
+              </label>
+            </div>
+            <div class="ui__checkbox error">
+              <input type="checkbox" name="" id="checkbox__error_checked" value="" checked>
+              <label for="checkbox__error_checked">
+                <svg class="ui__icon unchecked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox" disabled>
+                  </use>
+                </svg>
+                <svg class="ui__icon checked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox-checked"></use>
+                </svg>
+                <span>Label text</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="ui-preview__row">
+          <div class="ui-preview__col">Disabled</div>
+          <div class="ui-preview__col">
+            <div class="ui__checkbox disabled">
+              <input type="checkbox" name="" id="checkbox__disabled" value="" disabled>
+              <label for="checkbox__disabled">
+                <svg class="ui__icon unchecked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox" disabled>
+                  </use>
+                </svg>
+                <svg class="ui__icon checked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox-checked"></use>
+                </svg>
+                <span>Label text</span>
+              </label>
+            </div>
+            <div class="ui__checkbox disabled">
+              <input type="checkbox" name="" id="checkbox__disabled_checked" value="" disabled checked>
+              <label for="checkbox__disabled_checked">
+                <svg class="ui__icon unchecked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox" disabled>
+                  </use>
+                </svg>
+                <svg class="ui__icon checked">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/image/sprite.svg#checkbox-checked"></use>
+                </svg>
+                <span>Label text</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- #checkbox -->
+  </main>
+
   <script src="/js/project.js"></script>
 </body>
 
