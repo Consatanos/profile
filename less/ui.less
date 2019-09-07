@@ -302,12 +302,8 @@
       &+label {
         color: @color__highlight_light;
 
-        .checked {
-          .checked_hover;
-        }
-
-        .unchecked {
-          .unchecked_hover;
+        .ui__icon {
+          background-image: url('/image/checkbox__unchecked_hover.svg');
         }
       }
     }
@@ -316,12 +312,8 @@
       &+label {
         color: @color__highlight;
 
-        .checked {
-          .checked_focus;
-        }
-
-        .unchecked {
-          .unchecked_focus;
+        .ui__icon {
+          background-image: url('/image/checkbox__unchecked_focus.svg');
         }
       }
     }
@@ -330,24 +322,40 @@
       &+label {
         color: @color__hinted;
 
-        .checked {
-          .checked_disabled;
-        }
-
-        .unchecked {
-          .unchecked_disabled;
+        .ui__icon {
+          background-image: url('/image/checkbox__unchecked_disabled.svg');
         }
       }
     }
 
     &:checked {
       &+label {
-        .checked {
-          display: block;
+        .ui__icon {
+          background-image: url('/image/checkbox__checked_normal.svg');
         }
+      }
 
-        .unchecked {
-          display: none;
+      &:hover {
+        &+label {
+          .ui__icon {
+            background-image: url('/image/checkbox__checked_hover.svg');
+          }
+        }
+      }
+
+      &:hover {
+        &+label {
+          .ui__icon {
+            background-image: url('/image/checkbox__checked_focus.svg');
+          }
+        }
+      }
+
+      &:disabled {
+        &+label {
+          .ui__icon {
+            background-image: url('/image/checkbox__checked_disabled.svg');
+          }
         }
       }
     }
@@ -357,10 +365,12 @@
   .ui__icon {
     cursor: pointer;
     position: relative;
-    position: relative;
+    width: 16px;
+    height: 16px;
     top: 3px;
     margin-right: 4px;
     flex-shrink: 0;
+    background-image: url('/image/checkbox__unchecked_normal.svg');
   }
 
   label {
@@ -375,6 +385,58 @@
     }
   }
 
+  &.hover {
+    label {
+      color: @color__highlight_light;
+
+      &:hover {
+        color: @color__highlight_light;
+      }
+    }
+
+    input {
+      &+label {
+        .ui__icon {
+          background-image: url('/image/checkbox__unchecked_hover.svg');
+        }
+      }
+
+      &:checked {
+        &+label {
+          .ui__icon {
+            background-image: url('/image/checkbox__checked_hover.svg');
+          }
+        }
+      }
+    }
+  }
+
+  &.focus {
+    label {
+      color: @color__highlight;
+
+      &:hover {
+        color: @color__highlight;
+      }
+    }
+
+    input {
+      &+label {
+        .ui__icon {
+          background-image: url('/image/checkbox__unchecked_focus.svg');
+        }
+      }
+
+      &:checked {
+        &+label {
+          .ui__icon {
+            background-image: url('/image/checkbox__checked_focus.svg');
+          }
+        }
+      }
+    }
+  }
+
   &.error {
     label {
       color: @color__error;
@@ -384,13 +446,19 @@
       }
     }
 
-    .ui__icon {
-      &.checked {
-        .checked_error;
+    input {
+      &+label {
+        .ui__icon {
+          background-image: url('/image/checkbox__unchecked_error.svg');
+        }
       }
 
-      &.unchecked {
-        .unchecked_error;
+      &:checked {
+        &+label {
+          .ui__icon {
+            background-image: url('/image/checkbox__checked_error.svg');
+          }
+        }
       }
     }
   }
@@ -398,88 +466,26 @@
   &.disabled {
     .ui__icon {
       cursor: default;
-
-      &.checked {
-        .checked_disabled;
-      }
-
-      &.unchecked {
-        .unchecked_disabled;
-      }
+      background-image: url('/image/checkbox__unchecked_disabled.svg');
     }
   }
 }
 
 // ui-icon
-.ui__icon.unchecked {
+.ui__icon {
   color: @color__hinted;
   width: 16px;
   height: 16px;
 
   &:hover {
-    .unchecked_hover;
+    background-image: url('/image/checkbox__unchecked_hover.svg');
   }
 
   &:focus {
-    .unchecked_focus;
+    background-image: url('/image/checkbox__unchecked_focus.svg');
   }
 
   &:disabled {
-    .unchecked_disabled;
+    background-image: url('/image/checkbox__unchecked_disabled.svg');
   }
-}
-
-.unchecked_hover {
-  color: @color__highlight_light;
-}
-
-.unchecked_focus {
-  color: @color__highlight;
-}
-
-.unchecked_error {
-  color: @color__error;
-}
-
-.unchecked_disabled {
-  color: @color__border;
-}
-
-.ui__icon.checked {
-  color: @color__hinted;
-  fill: @color__highlight;
-  width: 16px;
-  height: 16px;
-
-  &:hover {
-    .checked_hover;
-  }
-
-  &:focus {
-    .checked_focus;
-  }
-
-  &:disabled {
-    .checked_disabled;
-  }
-}
-
-.checked_hover {
-  color: @color__highlight_light;
-  fill: @color__highlight_light;
-}
-
-.checked_focus {
-  color: @color__highlight;
-  fill: @color__highlight;
-}
-
-.checked_error {
-  color: @color__error;
-  fill: @color__error;
-}
-
-.checked_disabled {
-  color: @color__border;
-  fill: @color__border;
 }
