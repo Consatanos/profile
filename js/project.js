@@ -11,6 +11,15 @@ function saveChanges($form) {
         $(this).closest('.ui__form-section').removeClass('error');
       }
     });
+    $form.find('select').each(function () {
+      var value = $(this).val();
+      $(this).data('start', value);
+      if ($(this).val() === '') {
+        $(this).closest('.ui__form-section').addClass('error');
+      } else {
+        $(this).closest('.ui__form-section').removeClass('error');
+      }
+    });
     hideChangesButtons($form);
   });
 };
@@ -24,6 +33,9 @@ function discardChanges($form, $list) {
     for (var item in $list) {
       $form.find('[name="' + item + '"]').val($list[item]);
     }
+    $form.find('select').each(function(){
+      $(this).selectric('refresh');
+    })
     hideChangesButtons($form);
   });
 };
@@ -48,6 +60,20 @@ function hideChangesButtons($form) {
   $cancel.hide();
 };
 
+// change value
+function changeValue($form, $list){
+  if ($form.hasClass('is__change')) {
+    return;
+  }
+
+  $form.find('input').each(function () {
+      $list[$(this).prop('name')] = $(this).val();
+  });
+  $form.find('select').each(function () {
+      $list[$(this).prop('name')] = $(this).data('start');
+  });
+  showChangesButtons($form);
+}
 
 // form actions
 function formActions() {
@@ -60,15 +86,13 @@ function formActions() {
     });
 
     $(this).find('input').on('keypress change', function () {
-      if ($form.hasClass('is__change')) {
-        return;
-      }
-
-      $form.find('input').each(function () {
-        $list[$(this).prop('name')] = $(this).val();
-      });
-      showChangesButtons($form);
+      changeValue($form, $list);
     });
+
+    $(this).find('select').on('change', function () {
+      changeValue($form, $list);
+    });
+
     saveChanges($form);
     discardChanges($form, $list);
   });
