@@ -1,0 +1,44 @@
+// main: ../main.less
+// .aside
+.aside {
+  background-color: @color__panel;
+  width: 256px;
+  flex-shrink: 0;
+  padding: 7px 32px 50px 40px;
+  box-sizing: border-box;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+
+  &__section {
+    margin-bottom: 17px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid @color__border_inverted;
+      margin-bottom: 21px;
+    }
+  }
+
+  &__title {
+    .ui__text_secondary;
+    text-transform: uppercase;
+    line-height: 20px;
+    color: @color__font_inverted;
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 2px;
+    left: -21px;
+  }
+
+  &__menu {}
+}
+
+// #aside
