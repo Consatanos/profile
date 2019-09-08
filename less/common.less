@@ -10,7 +10,12 @@ html {
   color: @color__font;
 }
 
-body {}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: @color__panel;
+}
 
 a {
   .ui__link;
@@ -44,9 +49,14 @@ select {
   .ui__select;
 }
 
-.wrapper{
+.wrapper {
   width: 100%;
-  min-width: 1024px;
-  max-width: 1280px;
   margin: auto;
+}
+
+.main {
+  .wrapper;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
 }
