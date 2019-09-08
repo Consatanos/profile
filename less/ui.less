@@ -166,6 +166,7 @@
   background-color: @color__background;
   box-sizing: border-box;
   width: 300px;
+  margin-right: auto;
 
   &::placeholder {
     color: @color__hinted;
@@ -300,14 +301,6 @@
     select {
       .ui__select_focus;
     }
-
-    .ss {
-      &-main {
-        .ss-single-selected {
-          border-color: @color__highlight;
-        }
-      }
-    }
   }
 
   &.error {
@@ -322,13 +315,8 @@
     label {
       .ui__label_error;
     }
-
-    .ss {
-      &-main {
-        .ss-single-selected {
-          border-color: @color__error;
-        }
-      }
+    .selectric{
+      border-color: @color__error;
     }
   }
 
@@ -572,48 +560,61 @@
 
 
 
-// ss-select
-.ss {
-  &-main {
-    width: 300px;
-
-    .ss-single-selected {
-      border-radius: @border__radius;
-      height: 32px;
-      border: 1px solid @color__hinted;
-      padding: 9px;
-
-      .ss-arrow {
-        width: 16px;
-        height: 16px;
-        background-image: url('/image/arrow__down_dark.svg');
-        background-position: center;
-        margin: 0;
-        position: relative;
-        top: -1px;
-
-        span {
-          display: none;
-        }
+// selectric
+.selectric {
+  width: 300px;
+  box-sizing: border-box;
+  background-color: @color__background;
+  border-radius: @border__radius;
+  border: 1px solid @color__hinted;
+ 
+  .label{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: @color__font;
+    margin: 0 38px 0 8px;
+  }
+  .button{
+    background-color: @color__background;
+    height: 30px;
+    width: 30px;
+    font-size: 0;
+    background-image: url('/image/arrow__down_dark.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    &:after{
+      content: normal;
+    }
+  }
+  &-items{
+    border: 0;
+    border-radius: @border__radius;
+    li{
+      color: @color__font !important;
+      padding: 6px 32px;
+      font-size: 14px;
+      &:first-of-type{
+        padding-top: 15px;
+      }
+      &:last-of-type{
+        padding-bottom: 15px;
+      }
+      &:hover{
+        background-color: @color__black_light;
+      }
+      &.selected{
+        background-color: @color__highlight;
+        color: @color__font_inverted !important;
       }
     }
+  }
+}
 
-    .ss-content {
-      .ss-list {
-        .ss-option {
-          padding: 5px 31px;
+.selectric-open,
+.selectric-hover{
+  .selectric{
+    border-color: @color__highlight;
 
-          &:hover {
-            background-color: fade(#000000, 4%);
-            color: @color__font;
-          }
-
-          &.ss-option-selected {
-            background-color: @color__highlight;
-            color: @color__font_inverted;
-          }
-        }
-      }
-    }
   }
 }
