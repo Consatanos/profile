@@ -1,0 +1,52 @@
+// main: ../main.less
+// .menu-dropdown
+.menu-dropdown {
+  background-color: @color__background;
+  border-radius: @border__radius;
+  padding: 12px 23px 8px;
+  box-shadow: 0 0 1px 0 @color__border, 0 2px 8px 0 @color__border;
+  cursor: default;
+
+  &__title {
+    .ui__text_secondary;
+    color: @color__hinted;
+    margin-bottom: 5px;
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    padding: 5px 0;
+    min-width: 216px;
+  }
+
+  &__link {
+    color: @color__font;
+    white-space: nowrap;
+    line-height: 20px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: @color__highlight;
+    }
+
+    &:active {
+      color: @color__highlight_dark;
+    }
+  }
+
+  &__devider {
+    width: 100%;
+    height: 1px;
+    background-color: @color__border;
+    margin-top: 3px;
+    margin-bottom: 2px;
+  }
+}
+
+// #menu-dropdown
