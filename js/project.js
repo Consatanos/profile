@@ -33,7 +33,7 @@ function discardChanges($form, $list) {
     for (var item in $list) {
       $form.find('[name="' + item + '"]').val($list[item]);
     }
-    $form.find('select').each(function(){
+    $form.find('select').each(function () {
       $(this).selectric('refresh');
     })
     hideChangesButtons($form);
@@ -61,19 +61,19 @@ function hideChangesButtons($form) {
 };
 
 // change value
-function changeValue($form, $list){
+function changeValue($form, $list) {
   if ($form.hasClass('is__change')) {
     return;
   }
 
   $form.find('input').each(function () {
-      $list[$(this).prop('name')] = $(this).val();
+    $list[$(this).prop('name')] = $(this).val();
   });
   $form.find('select').each(function () {
-      $list[$(this).prop('name')] = $(this).data('start');
+    $list[$(this).prop('name')] = $(this).data('start');
   });
   showChangesButtons($form);
-}
+};
 
 // form actions
 function formActions() {
@@ -96,7 +96,23 @@ function formActions() {
     saveChanges($form);
     discardChanges($form, $list);
   });
-}
+};
+
+// tabs
+function tabsInit() {
+  $('.js__tabs-link').each(function () {
+    $(this).on('click', function (e) {
+      e.preventDefault();
+      $('.js__tabs-link').closest('.menu-aside__item').each(function () {
+        $(this).removeClass('is__active');
+      })
+      $(this).closest('.menu-aside__item').addClass('is__active');
+      var $target = $(this).attr('href');
+      $('.js__tabs-content').hide();
+      $('[data-tab="' + $target + '"]').show();
+    })
+  })
+};
 
 // init select plugin
 function initSelectPlugin() {
@@ -109,6 +125,8 @@ function initSelectPlugin() {
 $(function () {
 
   initSelectPlugin();
+
+  tabsInit();
 
   formActions();
 

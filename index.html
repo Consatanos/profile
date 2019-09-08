@@ -11,20 +11,25 @@
 
 <body>
 
+  <!-- .header -->
   <header class="header">
     <div class="header__row">
       <div class="header__col">
+        <!-- .logo -->
         <a href="/" class="logo">
           <img src="/image/logo.svg" alt="">
         </a>
+        <!-- #logo -->
       </div>
       <div class="header__col">
+        <!-- .profile-link -->
         <div class="profile-link">
           <div class="profile-link__img" style="background-image: url('/image/profile-foto.jpg')"></div>
           <div class="profile-link__content">
             <div class="profile-link__name">Konstantin</div>
             <div class="profile-link__position">Wrike Team</div>
           </div>
+          <!-- .menu-dropdown -->
           <div class="profile-link__menu menu-dropdown">
             <div class="menu-dropdown__title">Wrike Team</div>
             <ul class="menu-dropdown__list">
@@ -51,43 +56,51 @@
               </li>
             </ul>
           </div>
+          <!-- #menu-dropdown -->
         </div>
+        <!-- #profile-link -->
       </div>
     </div>
   </header>
+  <!-- #header -->
+  <!-- .main -->
   <div class="main">
+    <!-- .aside -->
     <aside class="aside">
       <div class="aside__section">
         <div class="aside__title">
           <div class="aside__icon" style="background-image: url('/image/user.svg')"></div>PERSONAL SETTINGS
         </div>
+        <!-- .menu-aside -->
         <div class="aside__menu menu-aside">
           <ul class="menu-aside__list">
             <li class="menu-aside__item is__active">
-              <a href="" class="menu-aside__link">Profile details</a>
+              <a href="#profile-details" class="menu-aside__link js__tabs-link">Profile details</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Account info</a>
+              <a href="#account-info" class="menu-aside__link js__tabs-link">Account info</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Email preferences</a>
+              <a href="#email-preferences" class="menu-aside__link js__tabs-link">Email preferences</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Work schedule</a>
+              <a href="#work-schedule" class="menu-aside__link js__tabs-link">Work schedule</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Password & security</a>
+              <a href="#password-&-security" class="menu-aside__link js__tabs-link">Password & security</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Apps access</a>
+              <a href="#apps-access" class="menu-aside__link js__tabs-link">Apps access</a>
             </li>
           </ul>
         </div>
+        <!-- #menu-aside -->
       </div>
       <div class="aside__section">
         <div class="aside__title">
           <div class="aside__icon" style="background-image: url('/image/setting.svg')"></div>ACCOUNT MANAGMENT
         </div>
+        <!-- .menu-aside -->
         <div class="aside__menu menu-aside">
           <ul class="menu-aside__list">
             <li class="menu-aside__item">
@@ -119,117 +132,151 @@
             </li>
           </ul>
         </div>
+        <!-- #menu-aside -->
       </div>
     </aside>
+    <!-- #aside -->
+    <!-- .content -->
     <main class="content">
-      <div class="content__title">
-        <h1>Profile details</h1>
+      <div class="tabs__content active js__tabs-content" data-tab="#profile-details">
+        <div class="content__title">
+          <h1>Profile details</h1>
+        </div>
+        <div class="content__main">
+          <article class="content__section">
+            <header class="content__header">
+              <!-- .profile -->
+              <div class="profile">
+                <div class="profile__img" style="background-image: url('/image/profile-foto.jpg')">
+                  <div class="profile__caption">upload</div>
+                </div>
+                <div class="profile__content">
+                  <div class="profile__name">
+                    <h2>Konstantin Oskin</h2>
+                  </div>
+                  <div class="profile__position">UI developer (crafting Team)</div>
+                </div>
+              </div>
+              <!-- #profile -->
+            </header>
+            <form class="content__form js__form" action="/" method="post">
+              <div class="ui__form-row">
+                <div class="ui__form-section ui__form-col">
+                  <label for="first-name">First name</label>
+                  <input type="text" name="first-name" id="first-name" placeholder="First name" value="Konstantin">
+                </div>
+                <div class="ui__form-section ui__form-col">
+                  <label for="last-name">Last name</label>
+                  <input type="text" name="last-name" id="last-name" placeholder="Last name" value="Oskin">
+                </div>
+                <div class="ui__form-section ui__form-col">
+                  <label for="company-name">Company name</label>
+                  <input type="text" name="company-name" id="company-name" placeholder="company-name" value="Wrike">
+                </div>
+                <div class="ui__form-section ui__form-col">
+                  <label for="job-title">Job title</label>
+                  <input type="text" name="job-title" id="job-title" placeholder="Job title"
+                    value="UI Developer (crafting team)">
+                </div>
+                <div class="ui__form-section ui__form-col">
+                  <label for="location">Location</label>
+                  <input type="text" name="location" id="location" placeholder="Location" value="Saint-Petersburg">
+                </div>
+                <div class="ui__form-section ui__form-col">
+                  <label for="phone-number">Phone number</label>
+                  <input type="text" name="phone-number" id="phone-number" placeholder="Phone number"
+                    value="+7 (952) 265-69-21">
+                </div>
+                <div class="ui__form-btns ui__form-col ui__form-col_single">
+                  <button type="submit" disabled>Save changes</button>
+                  <button class="ui__btn_pseudo js__discard-change" style="display: none;">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </article>
+          <article class="content__section">
+            <header class="content__header">
+              <h2>Workspace settings</h2>
+            </header>
+            <form class="content__form js__form" action="/" method="post">
+              <div class="ui__form-row">
+                <div class="ui__form-section ui__form-col">
+                  <label for="time-zone">Time zone</label>
+                  <select name="time-zone" id="time-zone" data-start="">
+                    <option value="">Placeholder</option>
+                    <option value="0">Placeholder</option>
+                    <option value="1">Value 1</option>
+                    <option value="2">Value 2</option>
+                  </select>
+                </div>
+                <div class="ui__form-section ui__form-col">
+                  <label for="language">Language</label>
+                  <select name="language" id="language" data-start="">
+                    <option value="">Placeholder</option>
+                    <option value="0">Placeholder</option>
+                    <option value="1">Value 1</option>
+                    <option value="2">Value 2</option>
+                  </select>
+                </div>
+                <div class="ui__form-section ui__form-col">
+                  <label for="new-task">New task created by default as</label>
+                  <select name="new-task" id="new-task" data-start="">
+                    <option value="">Placeholder</option>
+                    <option value="0">Placeholder</option>
+                    <option value="1">Value 1</option>
+                    <option value="2">Value 2</option>
+                  </select>
+                </div>
+                <div class="ui__form-col ui__form-col_single">
+                  <div class="ui__checkbox">
+                    <input type="checkbox" name="show-popup" id="show-popup" value="0" data-start="">
+                    <label for="show-popup">
+                      <span class="ui__icon"></span>
+                      <span class="ui__checkbox-caption">
+                        <span>Show pop-up with suggestion to align the dates of tasks and subtasks.</span>
+                        <a href="" class="ui__checkbox-description">How does subtask alignment work?</a>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="ui__form-btns ui__form-col ui__form-col_single">
+                  <button type="submit" disabled>Save settings</button>
+                  <button class="ui__btn_pseudo js__discard-change" style="display: none;">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </article>
+        </div>
       </div>
-      <div class="content__main">
-        <article class="content__section">
-          <header class="content__header">
-            <div class="profile">
-              <div class="profile__img" style="background-image: url('/image/profile-foto.jpg')">
-                <div class="profile__caption">upload</div>
-              </div>
-              <div class="profile__content">
-                <div class="profile__name">
-                  <h2>Konstantin Oskin</h2>
-                </div>
-                <div class="profile__position">UI developer (crafting Team)</div>
-              </div>
+      <div class="tabs__content js__tabs-content" data-tab="#account-info">
+          <div class="content__title">
+              <h1>Account info</h1>
             </div>
-          </header>
-          <form class="content__form js__form" action="/" method="post">
-            <div class="ui__form-row">
-              <div class="ui__form-section ui__form-col">
-                <label for="first-name">First name</label>
-                <input type="text" name="first-name" id="first-name" placeholder="First name" value="Konstantin">
-              </div>
-              <div class="ui__form-section ui__form-col">
-                <label for="last-name">Last name</label>
-                <input type="text" name="last-name" id="last-name" placeholder="Last name" value="Oskin">
-              </div>
-              <div class="ui__form-section ui__form-col">
-                <label for="company-name">Company name</label>
-                <input type="text" name="company-name" id="company-name" placeholder="company-name" value="Wrike">
-              </div>
-              <div class="ui__form-section ui__form-col">
-                <label for="job-title">Job title</label>
-                <input type="text" name="job-title" id="job-title" placeholder="Job title"
-                  value="UI Developer (crafting team)">
-              </div>
-              <div class="ui__form-section ui__form-col">
-                <label for="location">Location</label>
-                <input type="text" name="location" id="location" placeholder="Location" value="Saint-Petersburg">
-              </div>
-              <div class="ui__form-section ui__form-col">
-                <label for="phone-number">Phone number</label>
-                <input type="text" name="phone-number" id="phone-number" placeholder="Phone number"
-                  value="+7 (952) 265-69-21">
-              </div>
-              <div class="ui__form-btns ui__form-col ui__form-col_single">
-                <button type="submit" disabled>Save changes</button>
-                <button class="ui__btn_pseudo js__discard-change" style="display: none;">Cancel</button>
-              </div>
+      </div>
+      <div class="tabs__content js__tabs-content" data-tab="#email-preferences">
+          <div class="content__title">
+              <h1>Email preferences</h1>
             </div>
-          </form>
-        </article>
-        <article class="content__section">
-          <header class="content__header">
-            <h2>Workspace settings</h2>
-          </header>
-          <form class="content__form js__form" action="/" method="post">
-            <div class="ui__form-row">
-              <div class="ui__form-section ui__form-col">
-                <label for="time-zone">Time zone</label>
-                <select name="time-zone" id="time-zone" data-start="">
-                  <option value="">Placeholder</option>
-                  <option value="0">Placeholder</option>
-                  <option value="1">Value 1</option>
-                  <option value="2">Value 2</option>
-                </select>
-              </div>
-              <div class="ui__form-section ui__form-col">
-                <label for="language">Language</label>
-                <select name="language" id="language" data-start="">
-                    <option value="">Placeholder</option>
-                  <option value="0">Placeholder</option>
-                  <option value="1">Value 1</option>
-                  <option value="2">Value 2</option>
-                </select>
-              </div>
-              <div class="ui__form-section ui__form-col">
-                <label for="new-task">New task created by default as</label>
-                <select name="new-task" id="new-task" data-start="">
-                    <option value="">Placeholder</option>
-                  <option value="0">Placeholder</option>
-                  <option value="1">Value 1</option>
-                  <option value="2">Value 2</option>
-                </select>
-              </div>
-              <div class="ui__form-col ui__form-col_single">
-                <div class="ui__checkbox">
-                  <input type="checkbox" name="show-popup" id="show-popup" value="0" data-start="">
-                  <label for="show-popup">
-                    <span class="ui__icon"></span>
-                    <span class="ui__checkbox-caption">
-                      <span>Show pop-up with suggestion to align the dates of tasks and subtasks.</span>
-                      <a href="" class="ui__checkbox-description">How does subtask alignment work?</a>
-                    </span>
-                  </label>
-                </div>
-              </div>
-              <div class="ui__form-btns ui__form-col ui__form-col_single">
-                <button type="submit" disabled>Save settings</button>
-                <button class="ui__btn_pseudo js__discard-change" style="display: none;">Cancel</button>
-              </div>
+      </div>
+      <div class="tabs__content js__tabs-content" data-tab="#work-schedule">
+          <div class="content__title">
+              <h1>Work schedule</h1>
             </div>
-          </form>
-        </article>
+      </div>
+      <div class="tabs__content js__tabs-content" data-tab="#password-&-security">
+          <div class="content__title">
+              <h1>Password & security</h1>
+            </div>
+      </div>
+      <div class="tabs__content js__tabs-content" data-tab="#apps-access">
+          <div class="content__title">
+              <h1>Apps access</h1>
+            </div>
       </div>
     </main>
+    <!-- #content -->
   </div>
+  <!-- #main -->
   <script src="/libs/jquery/jquery.min.js"></script>
   <script src="/libs/selectric/jquery.selectric.min.js"></script>
   <script src="/js/project.js"></script>
