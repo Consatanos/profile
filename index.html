@@ -34,25 +34,25 @@
             <div class="menu-dropdown__title">Wrike Team</div>
             <ul class="menu-dropdown__list">
               <li class="menu-dropdown__item">
-                <a href="" class="menu-dropdown__link">Profile Settings</a>
+                <a href="№" class="menu-dropdown__link">Profile Settings</a>
               </li>
               <li class="menu-dropdown__item">
-                <a href="" class="menu-dropdown__link">Team directory</a>
+                <a href="№" class="menu-dropdown__link">Team directory</a>
               </li>
               <li class="menu-dropdown__item">
-                <a href="" class="menu-dropdown__link">Apps & Integrations</a>
+                <a href="№" class="menu-dropdown__link">Apps & Integrations</a>
               </li>
               <li class="menu-dropdown__item">
-                <a href="" class="menu-dropdown__link">Mobile apps</a>
+                <a href="№" class="menu-dropdown__link">Mobile apps</a>
               </li>
               <li class="menu-dropdown__item">
-                <a href="" class="menu-dropdown__link">Help</a>
+                <a href="№" class="menu-dropdown__link">Help</a>
               </li>
               <li class="menu-dropdown__item">
                 <div class="menu-dropdown__devider"></div>
               </li>
               <li class="menu-dropdown__item">
-                <a href="" class="menu-dropdown__link">Log Out</a>
+                <a href="№" class="menu-dropdown__link">Log Out</a>
               </li>
             </ul>
           </div>
@@ -69,8 +69,7 @@
     <aside class="aside">
       <div class="aside__section">
         <div class="aside__title">
-          <div class="aside__icon" style="background-image: url('/image/user.svg')"></div>PERSONAL SETTINGS
-        </div>
+          <div class="aside__icon" style="background-image: url('/image/user.svg')"></div>PERSONAL SETTINGS</div>
         <!-- .menu-aside -->
         <div class="aside__menu menu-aside">
           <ul class="menu-aside__list">
@@ -98,37 +97,36 @@
       </div>
       <div class="aside__section">
         <div class="aside__title">
-          <div class="aside__icon" style="background-image: url('/image/setting.svg')"></div>ACCOUNT MANAGMENT
-        </div>
+          <div class="aside__icon" style="background-image: url('/image/setting.svg')"></div>ACCOUNT MANAGMENT</div>
         <!-- .menu-aside -->
         <div class="aside__menu menu-aside">
           <ul class="menu-aside__list">
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Subscription</a>
+              <a href="#subscription" class="menu-aside__link js__tabs-link">Subscription</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Billing</a>
+              <a href="#billing" class="menu-aside__link js__tabs-link">Billing</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Users & groups</a>
+              <a href="#users-&-groups" class="menu-aside__link js__tabs-link">Users & groups</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Request form builder</a>
+              <a href="#request-form-builder" class="menu-aside__link js__tabs-link">Request form builder</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Custom workflows</a>
+              <a href="#custom-workflows" class="menu-aside__link js__tabs-link">Custom workflows</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Activity reports</a>
+              <a href="#activity-reports" class="menu-aside__link js__tabs-link">Activity reports</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Calendars</a>
+              <a href="#calendars" class="menu-aside__link js__tabs-link">Calendars</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Account settings</a>
+              <a href="#account-settings" class="menu-aside__link js__tabs-link">Account settings</a>
             </li>
             <li class="menu-aside__item">
-              <a href="" class="menu-aside__link">Advanced security</a>
+              <a href="#advanced-security" class="menu-aside__link js__tabs-link">Advanced security</a>
             </li>
           </ul>
         </div>
@@ -138,11 +136,13 @@
     <!-- #aside -->
     <!-- .content -->
     <main class="content">
-      <div class="tabs__content active js__tabs-content" data-tab="#profile-details">
-        <div class="content__title">
-          <h1>Profile details</h1>
-        </div>
-        <div class="content__main">
+      <div class="content__title">
+        <h1 class="js__tabs-title">Profile details</h1>
+      </div>
+      <div class="content__main">
+        <!-- .tabs-content -->
+        <!-- .personal-settings -->
+        <div class="tabs__content active js__tabs-content" data-tab="#profile-details">
           <article class="content__section">
             <header class="content__header">
               <!-- .profile -->
@@ -247,31 +247,24 @@
             </form>
           </article>
         </div>
-      </div>
-      <div class="tabs__content js__tabs-content" data-tab="#account-info">
-          <div class="content__title">
-              <h1>Account info</h1>
-            </div>
-      </div>
-      <div class="tabs__content js__tabs-content" data-tab="#email-preferences">
-          <div class="content__title">
-              <h1>Email preferences</h1>
-            </div>
-      </div>
-      <div class="tabs__content js__tabs-content" data-tab="#work-schedule">
-          <div class="content__title">
-              <h1>Work schedule</h1>
-            </div>
-      </div>
-      <div class="tabs__content js__tabs-content" data-tab="#password-&-security">
-          <div class="content__title">
-              <h1>Password & security</h1>
-            </div>
-      </div>
-      <div class="tabs__content js__tabs-content" data-tab="#apps-access">
-          <div class="content__title">
-              <h1>Apps access</h1>
-            </div>
+        <div class="tabs__content js__tabs-content" data-tab="#account-info"></div>
+        <div class="tabs__content js__tabs-content" data-tab="#email-preferences"></div>
+        <div class="tabs__content js__tabs-content" data-tab="#work-schedule"></div>
+        <div class="tabs__content js__tabs-content" data-tab="#password-&-security"></div>
+        <div class="tabs__content js__tabs-content" data-tab="#apps-access"></div>
+        <!-- #personal-settings -->
+        <!-- .account-managment -->
+        <div class="tabs__content js__tabs-content" data-tab="#subscription"></div>
+        <div class="tabs__content js__tabs-content" data-tab="#billing"></div>
+        <div class="tabs__content js__tabs-content" data-tab="#users-&-groups"></div>
+        <div class="tabs__content js__tabs-content" data-tab="#request-form-builder"></div>
+        <div class="tabs__content js__tabs-content" data-tab="#custom-workflows"></div>
+        <div class="tabs__content js__tabs-content" data-tab="#activity-reports"></div>
+        <div class="tabs__content js__tabs-content" data-tab="#calendars"></div>
+        <div class="tabs__content js__tabs-content" data-tab="#account-settings"></div>
+        <div class="tabs__content js__tabs-content" data-tab="#advanced-security"></div>
+        <!-- #account-managment -->
+        <!-- #tabs-content -->
       </div>
     </main>
     <!-- #content -->

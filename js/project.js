@@ -98,16 +98,19 @@ function formActions() {
   });
 };
 
-// tabs
+// init tabs
 function tabsInit() {
   $('.js__tabs-link').each(function () {
     $(this).on('click', function (e) {
       e.preventDefault();
+      var $target = $(this).attr('href');
+      var $text = $(this).text();
+
       $('.js__tabs-link').closest('.menu-aside__item').each(function () {
         $(this).removeClass('is__active');
       })
+      $('.js__tabs-title').text($text);
       $(this).closest('.menu-aside__item').addClass('is__active');
-      var $target = $(this).attr('href');
       $('.js__tabs-content').hide();
       $('[data-tab="' + $target + '"]').show();
     })
