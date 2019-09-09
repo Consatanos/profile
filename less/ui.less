@@ -311,7 +311,8 @@
     label {
       .ui__label_error;
     }
-    .selectric{
+
+    .selectric {
       border-color: @color__error;
     }
   }
@@ -563,15 +564,16 @@
   background-color: @color__background;
   border-radius: @border__radius;
   border: 1px solid @color__hinted;
- 
-  .label{
+
+  .label {
     height: 30px;
     line-height: 30px;
     font-size: 14px;
     color: @color__font;
     margin: 0 38px 0 8px;
   }
-  .button{
+
+  .button {
     background-color: @color__background;
     height: 30px;
     width: 30px;
@@ -579,38 +581,46 @@
     background-image: url('/image/arrow__down_dark.svg');
     background-position: center;
     background-repeat: no-repeat;
-    &:after{
+
+    &:after {
       content: normal;
     }
   }
-  &-items{
+
+  &-items {
     border: 0;
     border-radius: @border__radius;
-    li{
-      color: @color__font !important;
+    background-color: fade(#FFFFFF, 50%);
+    box-shadow: 0 0 8px -6px;
+
+    li {
+      color: @color__font  !important;
       padding: 6px 32px;
       font-size: 14px;
-      &:first-of-type{
+
+      &:first-of-type {
         padding-top: 15px;
       }
-      &:last-of-type{
+
+      &:last-of-type {
         padding-bottom: 15px;
       }
-      &:hover{
+
+      &:hover {
         background-color: @color__black_light;
       }
-      &.selected{
+
+      &.selected {
         background-color: @color__highlight;
-        color: @color__font_inverted !important;
+        color: @color__font_inverted  !important;
       }
     }
   }
 }
 
 .selectric-open,
-.selectric-hover{
-  .selectric{
+.selectric-hover {
+  .selectric {
     border-color: @color__highlight;
-
   }
 }
