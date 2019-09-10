@@ -4,7 +4,7 @@
   3) selectric - (кастомный селект)
 
 ## Страница
-  [consatanos.github.io](https://consatanos.github.io/)
+  [consatanos.github.io](https://consatanos.github.io/profile/)
 
 ## Компилятор less
   Для компилирования less используется расширение [Easy LESS](https://marketplace.visualstudio.com/items?itemName=mrcrowl.easy-less) для vscode.
