@@ -107,10 +107,10 @@ function tabsInit() {
       var $text = $(this).text();
 
       $('.js__tabs-link').closest('.menu-aside__item').each(function () {
-        $(this).removeClass('is__active');
+        $(this).removeClass('menu-aside__item_active');
       })
       $('.js__tabs-title').text($text);
-      $(this).closest('.menu-aside__item').addClass('is__active');
+      $(this).closest('.menu-aside__item').addClass('menu-aside__item_active');
       $('.js__tabs-content').hide();
       $('[data-tab="' + $target + '"]').show();
     })
