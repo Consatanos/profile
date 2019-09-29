@@ -8,3 +8,6 @@
 
 ## Компилятор less
   Для компилирования less используется расширение [Easy LESS](https://marketplace.visualstudio.com/items?itemName=mrcrowl.easy-less) для vscode.
+
+## Комментарии
+  Адаптив не предусмотрен, так как не тробовался по заданию.
